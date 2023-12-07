@@ -102,9 +102,6 @@ const upperLimit = 10
 // 3. Carry out the Plan
 // 4. Revise for Edge Cases
 
-
-
-
 const nums = [
     14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12,
     17, 12, 71, 18, 15, 12,
@@ -138,5 +135,34 @@ const findTheMedian = (arr) => {
     // Return that number
     return uniqueArr[medianIndex]
 }
-console.log(findTheMedian(nums))
+// console.log(findTheMedian(nums))
 // console.log(findTheMedian(five))
+
+
+
+const unsortedNums = [735, 123, 23, 87, 3, -2, 0, 546]
+
+// Sort() w no callback function passed to it
+// Only looks at the first value/digit in the number/string
+// console.log(unsortedNums.sort())
+
+// Function below uses a ternary, which is short hand for an if statement
+// In a ternary, we evaulate the expression that comes before the question mark
+// If the value is truthy, then we return what comes after the question mark
+// If the value i falsy, then we return what comes after the colon
+const func = (a, b) => a < b ? -1 : 1
+
+console.log(unsortedNums.sort(func))
+console.log(unsortedNums.sort((a, b) => a < b ? -1 : 1))
+
+const func2 = (a, b) => {
+    if(a < b){
+        return - 1
+    } else {
+        return 1
+    }
+}
+
+console.log(unsortedNums.sort(func2))
+
+
